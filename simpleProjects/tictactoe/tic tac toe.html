@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="panel panel-default">
+	<div class = "panel-header">
+		Tic Tac Toe
+	<div class = "panel-body">
+		
+	</div>
+</div>
+
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<button type="button" id="1" class="btn btn-default 10">-</button>
+		<button type="button" id="2" class="btn btn-default 11">-</button>
+		<button type="button" id="3" class="btn btn-default 12">-</button><br>
+		<button type="button" id="4" class="btn btn-default 20">-</button>
+		<button type="button" id="5" class="btn btn-default 21">-</button>
+		<button type="button" id="6" class="btn btn-default 22">-</button><br>
+		<button type="button" id="7" class="btn btn-default 30">-</button>
+		<button type="button" id="8" class="btn btn-default 31">-</button>
+		<button type="button" id="9" class="btn btn-default 32">-</button>
+	</div>
+</div>
+  
+
+
+
+
+<script>
+
+var line1 = ["-","-","-"];
+var line2 = ["-","-","-"];
+var line3 = ["-","-","-"];
+
+
+function horCheck (){
+	return (check(line1[0], line1[1], line1[2]) || check(line2[0], line2[1], line2[2]) || check(line3[0], line3[1], line3[2]));
+}
+
+function vertCheck(){
+	return(check((line1[0], line2[0]), line3[0]) || check(line1[1], line2[1], line3[1]) || check(line1[2], line2[2], line3[2]));
+}
+
+function diagCheck(){
+	return(check((line1[0], line2[1]), line3[2]) || check(line1[2], line2[1], line3[0]));
+}
+
+$('.btn').click(function() {
+	var clicked = this.value;
+	var id = this.id;
+	var idInt = parseInt(id);
+	if (clicked != "-") {
+		//change element by that id to X;
+		$('#' + id).html("X");
+		if (idInt >= 1 && idInt <=3){
+			line1[idInt-1] = 'X';
+		}
+		if (idInt >= 4 && idInt <=6){
+			line2[idInt-4] = 'X';
+		}
+		if (idInt >= 7 && idInt <=9){
+			line3[idInt-7] = 'X';
+		}
+	}
+
+	cpuMove();
+});
+
+function cpuMove () {
+	// do while
+	//gen random number
+	var rando;
+
+	do {
+		rando = Math.floor((Math.random() * 9) + 1);
+	}
+	while (('#' + rando).val() != "-");
+
+	$('#' + rando).html("O");
+
+
+}
+
+
+
+
+
+function check (x,y,z) {
+	if (x != '-'){
+		if ((x === y) && (y === z)) {
+			return true;
+		}
+		else return false;
+    }
+}
+
+// after click event - if (selector == "-";)
+
+
+
+
+
+
+// document.write(palindromization("123", 4));
+
+</script>
+
+</body>
+
+</html>

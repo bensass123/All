@@ -1,0 +1,20 @@
+textermcbottext
+Kb1
+
+CLIENT ID 
+
+1011119630735-f27okols6fcmjb2lget2jm2a5ue1vdn5.apps.googleusercontent.com
+
+
+
+CLIENT SECRET
+
+n2zoahLlRlCRLpHjhKAuLqyU
+
+https://i.redditmedia.com/w3oLnnDlwu7Nti1l4w8o6C_xMmltYwXYWbxzyKwSMio.jpg?w=681&s=aadc7332b0802eb07961281a9c48566e
+
+
+
+get survey //default to home.html
+get /api/friends   // This will be used to display a JSON of all possible 				friends.
+post /api/friends  //This will be used to handle incoming survey results. 			This route will also be used to handle the 				compatibility logic.

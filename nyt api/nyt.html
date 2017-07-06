@@ -1,0 +1,110 @@
+//api key dcb0f7ba1b4c4be5942adcefdb549ea1
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+</head>
+
+<body>
+<div class='container'>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>NYT Search</h1>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- Row for Searching New York Times -->
+    <div class="row">
+      <div class="col-sm-12">
+      	<div id ='search-params' class="panel panel-default">
+			<div class="panel-heading">Search Parameters</div>
+			<div class="panel-body">
+
+			<!-- Here we create an HTML Form for handling the inputs-->
+             <form role="form">
+
+            	<!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">Search Term:</label>
+                <input type="text" class="form-control" id="search-term">
+              </div>
+
+               <div class="form-group">
+                <label for="pwd">Number of records:</label>
+                <select class="form-control" id="num-of-records-select">
+	               <option value='1'>1</option>
+	               <option value='5' selected>5</option>
+	               <option value='10'>10</option>
+				</select>
+			   </div>
+
+			  <!-- Here we capture the Start Year Parameter-->
+              <div class="form-group">
+                <label for="start-year">Start Year (Optional):</label>
+                <input type="text" class="form-control" id="start-year">
+              </div>
+
+              <!-- Here we capture the End Year Parameter -->
+              <div class="form-group">
+                <label for="end-year">End Year (Optional):</label>
+                <input type="text" class="form-control" id="end-year">
+              </div>
+
+              <!-- Here we have our final submit button -->
+              <button type="submit" class="btn btn-default" id="run-search"><i class="fa fa-search"></i> Search</button>
+              <button type="button" class="btn btn-default" id="clear-all"><i class="fa fa-trash"></i> Clear Results</button>
+
+
+			  </form>
+            </div>	
+		</div>
+	  </div>	
+	</div>
+
+
+
+    <!-- This row will handle all of the retrieved articles -->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+
+        <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+        <div class="panel panel-primary">
+
+          <!-- Panel Heading for the retrieved articles box -->
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Top Articles</strong></h3>
+          </div>
+
+          <!-- This main panel will hold each of the resulting articles -->
+          <div class="panel-body" id="well-section">
+
+          </div>
+        </div>
+      </div>
+    </div>
+			
+
+
+</div>
+
+  
+<script type="text/javascript" src="nyt.js"></script>
+
+
+
+</body>
+
+
+</html>

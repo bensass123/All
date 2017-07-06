@@ -1,0 +1,18 @@
+var myVar;
+function startTimer() {
+  myVar = setInterval(function(){myTimer()},1000);
+  timelimit = maxtimelimit;
+}
+function myTimer() {
+  if (timelimit > 0) {
+    curmin=Math.floor(timelimit/60);
+    cursec=timelimit%60;
+    if (curmin!=0) { curtime=curmin+" minutes and "+cursec+" seconds left"; }
+              else { curtime=cursec+" seconds left"; }
+    $_('timeleft').innerHTML = curtime;
+  } else {
+    $_('timeleft').innerHTML = timelimit+' - Out of Time - no credit given for answer';
+    clearInterval(myVar);
+  }
+  timelimit--;
+}

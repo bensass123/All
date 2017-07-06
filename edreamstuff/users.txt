@@ -1,0 +1,16 @@
+users---
+
+indexFunny
+
+indexHard
+
+indexEasy
+
+indexIntermediate
+
+indexQuote
+
+indexInspirationalPics
+
+Score:  1 pt easy, 3 pts intermediate, 10 pts hard  - given on submit
+

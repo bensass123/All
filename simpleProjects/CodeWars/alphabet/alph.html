@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+
+    //this function returns a string showing the index of each letter in the original string and removing special characters while keeping spaces
+
+function alphabetPosition(text) {
+	  var alph=("abcdefghijklmnopqrstuvwxyz").split("");
+	  var textArray = text.split("");
+	  var textArray2 = [];
+
+
+	  for (i in textArray) {
+	  	textArray[i]=textArray[i].toLowerCase();
+	  }
+
+
+
+	for (x in textArray)
+	  {
+	  	for (i in alph){
+	  		if (alph[i] == textArray[x]) {
+	  			textArray2.push(parseInt(i) + 1);
+	  			break;
+	  		}
+	  		else if (textArray[x] == " "){
+	  			textArray2.push(" ");
+	  			break;
+	  		}
+	  	}
+	  }
+
+
+
+	  text = textArray2.join("");
+
+
+	  console.log(textArray2 + "textArray2");
+
+	  console.log(textArray + "textArray1");
+
+	  console.log(text);
+
+	  document.write(text);
+
+	  return text;
+
+	}
+
+	alphabetPosition("heL$@^*@#$%LO THe@#$r%E");
+
+
+	</script>
+  </head>
+
+
+  <body>
+  
+  </body>
+</html>
+

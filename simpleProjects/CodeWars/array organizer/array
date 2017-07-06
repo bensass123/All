@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+<script>
+function palindromization(element, n){
+  var retString = "";
+  var isEven = (n % 2 == 0);
+  
+  
+  if (isEven) {
+    for (i = 0; i < n/2; i++) {
+      retString += element.charAt(i);
+    }
+    for (i = n/2; i < n; i++) {
+      retString += element.charAt(i);
+    }
+  return retString;
+  }
+
+
+}
+
+</script>
+
+</body>
+
+</html>

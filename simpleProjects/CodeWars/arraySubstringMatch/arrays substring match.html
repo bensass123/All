@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+	function inArray(a1,a2){
+		var result = [];
+
+		for (i in a1) {
+			for (x in a2) {
+				if (a2[x].includes(a1[i])) {
+					result.push(a1[i]);
+					break;
+				}
+			}
+		}
+
+		result.sort();
+		return result;
+	}
+
+
+	var test1 = ["arp", "live", "strong"];
+	var test2 = ["lively", "alive", "harp", "sharp", "armstrong"];
+	document.write(inArray(test1,test2));
+
+    </script>
+
+
+
+  </head>
+
+  <body>
+  </body>
+
+<!-- Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+Example 1:
+
+a1 = ["arp", "live", "strong"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns ["arp", "live", "strong"]
+
+Example 2:
+
+a1 = ["tarp", "mice", "bull"]
+
+a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+returns [] -->
+</html>
+

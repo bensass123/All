@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BenopolyJS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<style>
+body {
+	margin-right: 60px;
+	margin-left: 60px;
+}
+
+.jumbotron {
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+
+</style>
+
+<body>
+
+	<div class="jumbotron" id='jumbo'>
+		<div class="container">
+			<h1>Employee Tracker</h1>
+			<p>Blah blah blah, etc, etc</p>
+		</div>
+	</div>
+ 
+ <div class="panel panel-primary">
+ 	<div class="panel-heading">Current Employees</div>
+ 	<div class="panel-body">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Employee Name</th>
+					<th>Role</th>
+					<th>Start Date</th>
+					<th>Months Worked</th>
+					<th>Monthly Rate ($)</th>
+					<th>Total Billed</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>Kevin</td>
+					<td>Kevin</td>
+					<td>Kevin</td>
+					<td>Kevin</td>
+					<td>Kevin</td>
+					<td>Kevin</td>
+				</tr>
+			</tbody>
+		</table>
+ 	</div>
+ </div>
+
+  <div class="panel panel-primary">
+ 	<div class="panel-heading">Add Employee</div>
+ 	<div class="panel-body">
+
+ 		<div class="form-group">
+    		<label for="empName">Employee Name</label>
+    		<input type="text" class="form-control" id="empName" placeholder="Billy Bob">
+  		</div>
+
+  		<div class="form-group">
+    		<label for="role">Role</label>
+    		<input type="text" class="form-control" id="role" placeholder="CEO">
+  		</div>	
+
+  		<div class="form-group">
+    		<label for="startDate">Start Date (DD/MM/YY)</label>
+    		<input type="text" class="form-control" id="startDate" placeholder="09/23/83">
+  		</div>	
+
+  		<div class="form-group">
+    		<label for="monthlyRate">Monthly Rate</label>
+    		<input type="text" class="form-control" id="monthlyRate" placeholder="09/23/83">
+  		</div>	
+
+  		<button type="button" class="btn btn-primary" id='submitButton'>Submit</button>
+
+ 	</div>
+	  
+
+	<script type = 'text/javascript'>
+		$('#submitButton').click(function() {
+			console.log($('#role').val());
+		});
+
+	</script>
+</body>
+
+
+</html>

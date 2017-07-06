@@ -1,0 +1,27 @@
+add: export default to class
+
+using snack expo io
+
+
+react-native init skeleton
+
+Looks like you installed react-native globally, maybe you meant react-native-cli?
+
+
+To fix the issue, run:
+
+npm uninstall -g react-native
+
+npm install -g react-native-cli
+
+npm install -g react-native
+
+
+
+
+project ideas
+
+1. food truck 
+
+
+

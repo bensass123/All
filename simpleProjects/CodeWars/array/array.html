@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+
+function array_diff(a, b) {
+	var temp = [];
+
+	for (i in a) {
+		for (x in b){
+			if (b[x] === a[i])
+				a[i] = null;
+		}
+	}
+
+	for (i in a){
+		if (a[i] != null)
+			temp.push(a[i]);
+	}
+
+
+
+	return temp;  
+}
+
+document.write(array_diff([1,2,2,2,3],[2]));
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+  </body>
+
+
+</html>

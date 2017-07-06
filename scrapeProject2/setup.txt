@@ -1,0 +1,7 @@
+Started with a oneclick LEMP stack
+
+Everything you need is contained in /scraper
+i auth with htaccess, i have a change password script for nginx if you wanna keep using that, there's lots of info online about how to setup htpasswd with nginx or apache or whatever
+i have a systemd job to start the script "test.sh" on boot, extremely barebones
+
+/var/www/html has everything in it, i symlink across the files that relate to the scraper, everything else is in that folder.

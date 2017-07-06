@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Function</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+    
+    <script>
+
+      // FUNCTIONS
+      // ================================================================================
+
+      // Creates a Function called "adder" that take three arguments (x, y, z).
+      // The function should add the arguments together, and log the result to the console.
+
+      function adder (x, y, z) {
+        var result = x + y + z;
+        console.log(result);
+      }
+
+
+
+
+      // Creates a Function called "multiplier" that takes three arguments (x, y, z).
+      // The functimultipon should multiply the arguments, and log the result to the console.
+      function multiplier (x, y, z) {
+        var result = x * y * z;
+        console.log(result);
+      }
+
+
+
+      // Creates a Function called "isString" that takes three arguments (x, y, z).
+      // "isString" determines if all three arguments are strings and logs an appropriate response to the console.
+
+      function isString(x, y, z) {
+        if ((typeof x === 'string') && (typeof y === 'string') && (typeof z === 'string'))
+          return true;
+        return false;
+      }
+
+
+
+
+
+      // Creates a Function called "vowelChecker" that takes in a single argument (x).
+      // "vowlChecker" logs whether or not the input is a vowel.
+
+      function vowelChecker (char) {
+        var x = char.toLowerCase();
+        return x === 'a' || x === 'e' || x === 'i' || x === 'o' || x === 'u' || false;
+      }
+
+
+
+
+      // FUNCTION EXECUTION
+      // ================================================================================
+
+      // Add in the lines of code below necessary to call the functions we created above.
+
+
+      // Call the adder function here.
+      adder(5,10,10);
+
+      console.log("-------------------");
+
+
+      // Call the multiplier function here.
+      multiplier(5,10,10);
+
+      console.log("-------------------");
+
+
+      // Call the isString function here.
+      console.log(isString("hello there",true,"yes"));
+
+      console.log("-------------------");
+
+
+      // Call the vowelChecker function here.
+      console.log(vowelChecker("E"));
+
+
+    </script>
+
+  </body>
+</html>

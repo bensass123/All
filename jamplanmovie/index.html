@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <title>JAM PLAN</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Custom stylesheet -->
+    <link href="fullscreen.css" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+
+  <div class="container-fluid maincontent"> <!-- Main container that holds form and map results starts -->
+  
+    <div class="row"> <!-- row div starts -->
+
+      <div class="col-lg-8"> <!-- Column div starts -->
+
+        <div class="panel panel-primary" id="maps"> <!-- Panel to display maps starts -->
+      
+          <div class="panel-heading heading" id='map-heading' >MAPS <button class='btn btn-success' id='traffic'>Toggle Traffic</button><i id='loadingIcon' class="fa fa-spinner fa-pulse fa-2x fa-fw pull-right"></i>
+          <div class="dropdown pull-right" id='our-dropdown-menu'>
+                      <a style='display:inline-block;' href="#" data-toggle="dropdown" class="dropdown-toggle">Sort Events For<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" data-date='today'>Today</a></li>
+                          <li><a href="#" data-date='week'>This Week</a></li>
+                          <li><a href="#" data-date='month'>This Month</a></li>
+                          <li><a href="#" data-date='all'>All Events</a></li>
+                        </ul>
+                  </div>
+            
+          </div> 
+          
+          <!-- Panel body that displays maps results -->
+          <div class="panel-body mapdiv" id="mapresult" > 
+            
+          </div>
+          
+        </div> <!-- Panel to display maps end -->
+        
+      </div> <!-- End Column div -->
+
+      <div class="col-lg-4"> <!-- Column div starts -->
+
+        <!-- Custom Search Panel div start -->
+
+          <div class="panel panel-primary resultcont">
+      
+            <div class="panel-heading heading" id='custom-search-dropdown' data-toggle='collapse' data-target='#myform'>Custom Search</div> <!-- panel-heading --> 
+        
+              <div class="panel-body panel-form"> <!-- start panel-form -->
+  
+                <form id="myform" class='collapse'> <!-- Form start -->
+  
+                  <div class="question"> <!-- Search by city name -->
+              
+                    <label>City / Zipcode</label>
+                      
+                    <input type="text" class="form-control" name="term" id="city">
+    
+                  </div><br>
+
+                  <div class=" form-group question"> <!-- Search from specific date -->
+            
+                    <label>From:</label>
+                      
+                    <div class='input-group date date1' id='datetimepicker1'>
+
+                      <input type='text' id="range1" class="form-control fromdate">
+                      <span class="input-group-addon  " >
+                        <span class="glyphicon glyphicon-calendar" style="color:#ff4a56;"></span>
+                      
+                      </span>
+                      
+                    </div>
+
+                  </div><br>
+
+                  <div class="form-group question"> <!-- Search within specific date range -->
+
+                    <label>To:</label>
+                        
+                    <div class='input-group date' id='datetimepicker2'>
+                          
+                      <input type='text' id="range2" class="form-control todate" />
+                      <span class="input-group-addon ">
+                        <span class="glyphicon glyphicon-calendar" style="color:#ff4a56;"></span>
+                      </span>
+                    
+                    </div>
+
+                  </div>
+
+                  
+  
+                  <div class="form-group question"> 
+                
+                    <button id="add-submit">Submit</button>
+                    <button id="clear">Clear</button>
+
+                  </div>
+                  
+              
+                </form> <!-- End form -->
+        
+              </div> <!-- End panel-form -->
+
+          </div> <!-- End Custom Search Panel div -->
+
+      </div> <!-- End Column div -->
+    
+      
+  
+    </div> <!-- End row div -->
+  
+  </div> <!-- Main container that holds form and map results ends -->
+
+  <div class="container " id="results"> <!-- search result container starts -->
+      
+    <div class="panel panel-primary resultcont">
+        
+      <div class="panel-heading heading">Concert Details <span id="clockbox"></span></div>
+        
+        <div class="panel-body table-responsive" id="results-panel">
+          
+          <!-- Result Table-->
+          <table class="table table-hover" id='concert-table'> 
+            
+            <thead>
+              
+              <tr>
+                
+                <th>Event</th>
+                <th>Venue</th>
+                <th>Directions</th>
+                <th>Starts:</th>
+              
+              </tr>
+            
+            </thead>
+            
+            <tbody>
+              
+            </tbody>
+            
+          </table>
+                    
+        </div>
+        
+    </div>
+
+  </div> <!-- search result container ends -->
+
+  </body>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+</head>
+
+
+
+	<script>
+
+
+function showAlert2(){
+	   var app_key = 'cwS4RsHxLmMG3kx7';
+
+	   var query   = 'Music';
+	   var oArgs = {
+	      app_key: app_key,
+	      q: query,
+	      where: 'Charlotte',
+	      "date": "2013061000-2015062000",
+	      "include": "tags,categories",
+	      page_size: 5,
+	      sort_order: "popularity",
+	   };
+
+	   var queryURL = 'http://api.eventful.com/json/events/search?app_key=cwS4RsHxLmMG3kx7&q=' + oArgs.q + '&where=' + oArgs.where + '&date=2013061000-2015062000&include=tags%2Ccategories&page_size=5&sort_order=popularity&json_request_id=1';
+
+
+	$.ajax({
+    	url: queryURL,
+    	method: "GET"
+  		}).done(function(rdata) {
+  			for (i in rdata){
+  			  	console.log(rdata[i]);
+  			}
+
+  		});
+
+
+
+   	// EVDB.API.call("/events/search", oArgs, function(oData) {
+   	// 	for (i in oData){
+   	// 		console.log(oData[i].toString());
+   	// 	}
+    // });
+
+	// http://api.eventful.com/json/events/search?app_key=cwS4RsHxLmMG3kx7&q=Music&where=Charlotte&date=2013061000-2015062000&include=tags%2Ccategories&page_size=5&sort_order=popularity&json_request_id=1
+
+}
+
+
+function createButton() {
+    var $b1 = $('<button/>', {
+        text: 'query',
+        id: 'querybtn',
+        click: showAlert2
+    });
+
+    $('body').append($b1);
+}
+
+
+
+
+
+
+	</script>
+<body onload='createButton();'>
+
+
+</body>
+
+
+
+</html>

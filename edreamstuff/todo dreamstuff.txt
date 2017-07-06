@@ -1,0 +1,20 @@
+writing queries to deliver stuff based on current indices
+
+writing update function to increment index (do for each index)
+
+finishing users model, implementing 
+
+create api route to post to Users table, when stormpath new user added create table entry
+
+
+migration create? generate migration file.
+
+
+heroku db:migrate --env 'production'
+
+
+fix easies id, no id of 1
+
+create uri for next, prev for arrows
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+
+
+    function discoverOriginalPrice(discountedPrice, salePercentage){
+	  // ...
+	  var discount = 1 - salePercentage/100;
+	  var num = discountedPrice/discount;
+	  num = parseFloat(num.toFixed(2));
+	  return num;
+   
+	}
+
+	document.write(discoverOriginalPrice(75,25));
+
+
+</script>
+</head>
+</html>

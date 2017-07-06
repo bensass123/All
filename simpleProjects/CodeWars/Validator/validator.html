@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+
+    function validatePIN (pin) {
+    	var p = Array.from(pin);
+    	if ((p.length != 4) && (p.length !=6))
+    		return false;
+
+    	if (isNaN(pin))
+    		return false;
+
+    	if (pin % 1 != 0) 
+    		return false;
+
+
+    	return true;
+    }
+
+
+    console.log(validatePIN("2"));
+    console.log(validatePIN("2345"));
+    console.log(validatePIN("2.56"));
+    console.log(validatePIN("12.456"));
+
+    </script>
+
+  </head>
+
+  <body>
+  </body>
+
+
+</html>
+
+
+<!-- IDEAL SOLUTION W REGEX -->
+
+<!-- 
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+} -->

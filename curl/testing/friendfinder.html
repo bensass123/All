@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>FriendFinder Survey</title>
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<style>
+
+    body {
+          background: url(https://i.redd.it/5ltvj5zoqrly.jpg) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+    }
+
+    .container {
+        max-width: 450px;
+    }
+    h3 {
+        color: red;
+    }
+
+    .opinion {
+        color: white;
+    }
+
+
+</style>
+
+<body>
+
+<h3>Survey</h3>
+
+<div class="container">
+ <div class='form-group'>
+
+  <h2>FIND A FRIEND, YAYYY!</h2>
+        
+  <form action="/api/friends" method="POST"> 
+    <label for='name'>Name:</label>
+    <textarea type="text" name="name" id='name'></textarea>
+    <label for='photo'>Photo URL:</label>
+    <textarea type="text" name="photo" id='photo'>http://lorempixel.com/400/200/people/</textarea>
+
+    <h3>Opinion 1</h3>
+        <h3 class='opinion'>Han Solo is the most interesting character in the trilogy.
+        <select class="form-control chosen-select" id="q1" name='q1'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+    
+
+    <h3>Opinion 2</h3>
+        <h3 class='opinion'>Greedo shot first</h3>
+        <select class="form-control chosen-select" id="q2" name='q2'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 3</h3>
+        <h3 class='opinion'>Jabba means well. He was just misunderstood.</h3>
+        <select class="form-control chosen-select" id="q3" name='q3'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 4</h3>
+        <h3 class='opinion'>Luke is whiny in the first movie.</h3>
+        <select class="form-control chosen-select" id="q4" name='q4'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 5</h3>
+    <h3 class='opinion'>Luke is whiny throughout all three movies.</h3>
+        <select class="form-control chosen-select" id="q5" name='q5'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 6</h3>
+        <h3 class='opinion'>Han is a scruffy nerfherder.</h3>
+        <select class="form-control chosen-select" id="q6" name='q6'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 7</h3>
+        <h3 class='opinion'>Chewy probably smells like the excrement of a Bantha, but it would be worth it to fly with him for his fearsome loyalty.</h3>
+        <select class="form-control chosen-select" id="q7" name='q7'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 8</h3>
+        <h3 class='opinion'>I want to be a Sith.</h3>
+        <select class="form-control chosen-select" id="q8" name='q8'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 9</h3>
+        <h3 class='opinion'>I want to be a Jedi.</h3>
+        <select class="form-control chosen-select" id="q9" name='q9'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+    <h3>Opinion 10</h3>
+        <h3 class='opinion'>Darth Vader could have taken a different path if he hadn't been such a dorky kid.</h3>
+        <select class="form-control chosen-select" id="q10" name='q10'>
+            <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+
+
+    <button type='submit' id='submit'>Submit</button>
+    </form>
+  </div>
+</div>
+
+<div id="resultsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+            <h2 id="matchName"></h2>
+            <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(function() {
+
+
+
+    // Capture the form inputs 
+    $("#submit").on("click", function(){
+        event.preventDefault();
+        console.log('test');
+        // Form validation
+        function validateForm() {
+          var isValid = true;
+          $('.form-control').each(function() {
+            if ( $(this).val() === '' )
+                isValid = false;
+          });
+
+          $('.chosen-select').each(function() {
+
+            if( $(this).val() === "")
+                isValid = false
+          })
+          return isValid;
+        }
+
+        // If all required fields are filled
+        if (validateForm() == true)
+        {
+            // Create an object for the user's data
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+            };
+
+
+            // Grab the URL of the website
+            var currentURL = window.location.origin;
+            console.log(currentURL);
+            console.log(userData);
+
+            // AJAX post the data to the friends API. 
+            $.post(currentURL + "/api/friends", userData, function(data){
+
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                console.log(data);
+                $("#matchName").text(data.name);
+                $('#matchImg').attr("src", data.photo);
+
+                // Show the modal with the best match 
+                $("#resultsModal").modal('toggle');
+
+            });
+        }
+        else
+        {
+            alert("Please fill out all fields before submitting!");
+        }
+        
+        return false;
+    });
+});
+
+
+  </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+
+</html>

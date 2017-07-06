@@ -1,0 +1,66 @@
+<!-- Just change the YOUR APP KEY below to whatever your api key is and you can test the javascript interface to the API.  -->
+
+
+<html>
+
+Javascript Sample page <br>
+
+<script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+
+<script type="text/javascript">
+
+var returnData;
+
+
+
+function eventArrayReturn(latLong){
+
+   var oArgs = {
+
+      app_key: "cwS4RsHxLmMG3kx7",
+
+      q: "music",
+
+      where: latLong, 
+
+      within: 30,
+
+      "date": "2017011700-2017012500",
+
+      page_size: 20,
+
+      sort_order: "popularity",
+
+   };
+
+   EVDB.API.call("/events/search", oArgs, function(oData) {
+        // console.log(oData.events.event);
+        returnData = oData.events.event;
+        console.log(oData);
+    });
+}
+
+ function maps(){ 
+ //get current lat and lon, eventArrayReturn(currentLatLong) 
+}
+
+
+
+
+</script>
+
+
+
+<body>
+
+Run Sample api searches <br><br>
+
+
+
+<input type="button" onclick="eventArrayReturn('35.227085, -80.843124')" value="Log return value of ret array function" /> <br>
+
+</body>
+
+</html>
+
+
